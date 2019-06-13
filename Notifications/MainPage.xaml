@@ -8,7 +8,15 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
 
-    </Grid>
+    <StackPanel Orientation="Vertical">
+        <StackPanel Orientation="Horizontal" Padding="15" >
+            <TextBox x:Name="SubjectTB" Margin="15"/>
+            <TextBox x:Name="Content" Margin=" 15"/>
+            <TimePicker x:Name="TimePicker" Margin="15"/>
+        </StackPanel>
+
+    </StackPanel>
+
 </Page>
+    

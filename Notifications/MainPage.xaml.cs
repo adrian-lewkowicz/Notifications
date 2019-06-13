@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.Toolkit.Uwp.Notifications;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,5 +27,39 @@ namespace Notifications
         {
             this.InitializeComponent();
         }
+
+        TileContent content = new TileContent()
+        {
+            Visual = new TileVisual()
+            {
+                TileWide = new TileBinding()
+                {
+                    Content = new TileBindingContentAdaptive()
+                    {
+                        Children =
+                {
+                    new AdaptiveText()
+                    {
+                        Text = "work",
+                        HintStyle=AdaptiveTextStyle.Header
+                    },
+
+                    new AdaptiveText()
+                    {
+                        Text = "okay",
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    },
+
+                    new AdaptiveText()
+                    {
+                        Text = "good",
+                        HintStyle = AdaptiveTextStyle.CaptionSubtle
+                    }
+                }
+                    }
+                }
+            }
+        };
+
     }
 }
